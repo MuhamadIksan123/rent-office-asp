@@ -4,6 +4,7 @@ using RentOffice.Models;
 using Microsoft.EntityFrameworkCore;
 using RentOffice.Payload.Response;
 using RentOffice.Payload.Request;
+using RentOffice.Services;
 
 namespace RentOffice.Controllers
 {
@@ -12,10 +13,12 @@ namespace RentOffice.Controllers
     public class OfficeSpaceController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly FileService _fileService;
 
-        public OfficeSpaceController(ApplicationDbContext context)
+        public OfficeSpaceController(ApplicationDbContext context, FileService fileService)
         {
             _context = context;
+            _fileService = fileService;
         }
 
         // GET: api/OfficeSpace
@@ -39,17 +42,32 @@ namespace RentOffice.Controllers
 
         // POST: api/OfficeSpace
         [HttpPost]
-        public async Task<IActionResult> CreateOfficeSpace([FromBody] OfficeSpaceRequest request)
+        public async Task<IActionResult> CreateOfficeSpace([FromForm] OfficeSpaceRequest request)
         {
             if (request.Photos.Count != 3 || request.Benefits.Count != 3)
             {
-                return BadRequest("You must provide exactly 3 photos and 3 benefits.");
+                return BadRequest("Anda harus mengunggah tepat 3 foto dan memberikan 3 manfaat.");
             }
 
             var city = await _context.Cities.FindAsync(request.CityId);
             if (city == null)
             {
-                return BadRequest("City not found.");
+                return BadRequest("Kota tidak ditemukan.");
+            }
+
+            // Simpan Thumbnail
+            string thumbnailPath = await _fileService.SaveFileAsync(request.Thumbnail, "office_thumbnails");
+
+            // Simpan Foto
+            var photoPaths = new List<OfficeSpacePhoto>();
+            foreach (var photo in request.Photos)
+            {
+                string photoPath = await _fileService.SaveFileAsync(photo, "office_photos");
+                photoPaths.Add(new OfficeSpacePhoto
+                {
+                    Photo = photoPath,
+                    CreatedAt = DateOnly.FromDateTime(DateTime.Now)
+                });
             }
 
             var officeSpace = new OfficeSpace
@@ -58,16 +76,12 @@ namespace RentOffice.Controllers
                 Address = request.Address,
                 Duration = request.Duration,
                 Price = request.Price,
-                Thumbnail = request.Thumbnail,
+                Thumbnail = thumbnailPath,
                 About = request.About,
                 CityId = city.Id,
                 CreatedAt = DateOnly.FromDateTime(DateTime.Now),
                 Slug = request.Name.ToLower().Replace(" ", "-"),
-                Photos = request.Photos.Select(p => new OfficeSpacePhoto
-                {
-                    Photo = p,
-                    CreatedAt = DateOnly.FromDateTime(DateTime.Now)
-                }).ToList(),
+                Photos = photoPaths,
                 Benefits = request.Benefits.Select(b => new OfficeSpaceBenefit
                 {
                     Name = b,
@@ -78,8 +92,9 @@ namespace RentOffice.Controllers
             _context.OfficeSpaces.Add(officeSpace);
             await _context.SaveChangesAsync();
 
-            return StatusCode(201, "Berhasil ditambahkan");
+            return StatusCode(201, new { message = "Berhasil ditambahkan", officeSpace });
         }
+
 
         // GET: api/OfficeSpace/{id}
         [HttpGet("{id}")]
@@ -105,13 +120,8 @@ namespace RentOffice.Controllers
 
         // PUT: api/OfficeSpace/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateOfficeSpace(int id, [FromBody] OfficeSpaceRequest request)
+        public async Task<IActionResult> UpdateOfficeSpace(int id, [FromForm] OfficeSpaceRequest request, List<IFormFile> photos, IFormFile thumbnail)
         {
-            if (request.Photos.Count != 3 || request.Benefits.Count != 3)
-            {
-                return BadRequest("You must provide exactly 3 photos and 3 benefits.");
-            }
-
             var officeSpace = await _context.OfficeSpaces
                 .Include(os => os.Photos)
                 .Include(os => os.Benefits)
@@ -132,26 +142,36 @@ namespace RentOffice.Controllers
             officeSpace.Address = request.Address;
             officeSpace.Duration = request.Duration;
             officeSpace.Price = request.Price;
-            officeSpace.Thumbnail = request.Thumbnail;
             officeSpace.About = request.About;
             officeSpace.CityId = city.Id;
             officeSpace.Slug = request.Name.ToLower().Replace(" ", "-");
 
-            officeSpace.Photos = request.Photos.Select(p => new OfficeSpacePhoto
+            if (thumbnail != null)
             {
-                Photo = p,
-                CreatedAt = DateOnly.FromDateTime(DateTime.Now)
-            }).ToList();
+                officeSpace.Thumbnail = await _fileService.SaveFileAsync(thumbnail, "thumbnails");
+            }
 
-            officeSpace.Benefits = request.Benefits.Select(b => new OfficeSpaceBenefit
+            if (photos != null && photos.Count > 0)
             {
-                Name = b,
-                CreatedAt = DateOnly.FromDateTime(DateTime.Now)
-            }).ToList();
+                officeSpace.Photos = photos.Select(p => new OfficeSpacePhoto
+                {
+                    Photo = _fileService.SaveFileAsync(p, "photos").Result,
+                    CreatedAt = DateOnly.FromDateTime(DateTime.Now)
+                }).ToList();
+            }
+
+            if (request.Benefits != null && request.Benefits.Count > 0)
+            {
+                officeSpace.Benefits = request.Benefits.Select(b => new OfficeSpaceBenefit
+                {
+                    Name = b,
+                    CreatedAt = DateOnly.FromDateTime(DateTime.Now)
+                }).ToList();
+            }
 
             await _context.SaveChangesAsync();
 
-            return Ok("Data berhasil Diubah");
+            return Ok("Data berhasil diubah");
         }
 
         // DELETE: api/OfficeSpace/{id}

@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/RentOffice/uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cities\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SSzky40yy/dmzWtL7/ids6VI\u002BpZegwrCJD4yfZmxZoQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2362364"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022SSzky40yy/dmzWtL7/ids6VI\u002BpZegwrCJD4yfZmxZoQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 11:02:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RentOffice/uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.pwzianieje.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cities\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pwzianieje"},{"Name":"integrity","Value":"sha256-SSzky40yy/dmzWtL7/ids6VI\u002BpZegwrCJD4yfZmxZoQ="},{"Name":"label","Value":"_content/RentOffice/uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2362364"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022SSzky40yy/dmzWtL7/ids6VI\u002BpZegwrCJD4yfZmxZoQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 11:02:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RentOffice/uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.dwbeiobt01.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cities\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dwbeiobt01"},{"Name":"integrity","Value":"sha256-vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI="},{"Name":"label","Value":"_content/RentOffice/uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"727269"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 11:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RentOffice/uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cities\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"727269"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 09 Feb 2025 11:11:07 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

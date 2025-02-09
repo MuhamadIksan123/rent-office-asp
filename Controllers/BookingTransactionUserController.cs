@@ -6,9 +6,9 @@ using RentOffice.Data;
 using RentOffice.Models;
 using RentOffice.Payload.Request;
 using RentOffice.Payload.Response;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
-using Twilio.Types;
+// using Twilio;
+// using Twilio.Rest.Api.V2010.Account;
+// using Twilio.Types;
 
 
 namespace RentOffice.Controllers
@@ -73,36 +73,36 @@ namespace RentOffice.Controllers
             };
 
             // Kirim notifikasi via Twilio WhatsApp
-            string accountSid = _configuration["Twilio:AccountSid"];
-            string authToken = _configuration["Twilio:AuthToken"];
+            // string accountSid = _configuration["Twilio:AccountSid"];
+            // string authToken = _configuration["Twilio:AuthToken"];
 
-            if (string.IsNullOrEmpty(accountSid) || string.IsNullOrEmpty(authToken))
-            {
-                return StatusCode(500, "Twilio credentials are missing!");
-            }
+            // if (string.IsNullOrEmpty(accountSid) || string.IsNullOrEmpty(authToken))
+            // {
+            //     return StatusCode(500, "Twilio credentials are missing!");
+            // }
 
             // Inisialisasi Twilio
-            TwilioClient.Init(accountSid, authToken);
+            // TwilioClient.Init(accountSid, authToken);
 
             // Membuat body pesan untuk WhatsApp
-            var messageBody = $"Hi ({bookingTransaction.Name}), Terima kasih telah booking kantor di FirstOffice.\n\n" +
-                              $"Pesanan kantor ({officeSpace.Name}) Anda sedang kami proses dengan Booking TRX ID: {bookingTransaction.BookingTrxId}.\n\n" +
-                              "Kami akan menginformasikan kembali status pemesanan Anda secepat mungkin.";
+            // var messageBody = $"Hi ({bookingTransaction.Name}), Terima kasih telah booking kantor di FirstOffice.\n\n" +
+            //                   $"Pesanan kantor ({officeSpace.Name}) Anda sedang kami proses dengan Booking TRX ID: {bookingTransaction.BookingTrxId}.\n\n" +
+            //                   "Kami akan menginformasikan kembali status pemesanan Anda secepat mungkin.";
 
-            try
-            {
-                // Kirim pesan WhatsApp
-                var message = MessageResource.Create(
-                    from: new PhoneNumber("whatsapp:+14155238886"), // Nomor pengirim WhatsApp Twilio
-                    to: new PhoneNumber($"whatsapp:+{bookingTransaction.PhoneNumber}"), // Nomor penerima
-                    body: messageBody
-                );
-            }
-            catch (Exception ex)
-            {
-                // Menangani error jika pengiriman pesan gagal
-                return StatusCode(500, $"Failed to send WhatsApp message: {ex.Message}");
-            }
+            // try
+            // {
+            //     // Kirim pesan WhatsApp
+            //     var message = MessageResource.Create(
+            //         from: new PhoneNumber("whatsapp:+14155238886"), // Nomor pengirim WhatsApp Twilio
+            //         to: new PhoneNumber($"whatsapp:+{bookingTransaction.PhoneNumber}"), // Nomor penerima
+            //         body: messageBody
+            //     );
+            // }
+            // catch (Exception ex)
+            // {
+            //     // Menangani error jika pengiriman pesan gagal
+            //     return StatusCode(500, $"Failed to send WhatsApp message: {ex.Message}");
+            // }
 
             // Kembalikan response dengan informasi transaksi booking
             return responseBody;

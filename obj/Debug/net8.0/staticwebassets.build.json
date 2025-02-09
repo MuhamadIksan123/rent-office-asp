@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "s5rHprtS4A8WjjLtVAAaXM1g2QbINT0vvkQF1xm8BoU=",
+  "Source": "RentOffice",
+  "BasePath": "_content/RentOffice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "RentOffice\\wwwroot",
+      "Source": "RentOffice",
+      "ContentRoot": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\",
+      "BasePath": "_content/RentOffice",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg",
+      "SourceId": "RentOffice",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\",
+      "BasePath": "_content/RentOffice",
+      "RelativePath": "uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pwzianieje",
+      "Integrity": "SSzky40yy/dmzWtL7/ids6VI+pZegwrCJD4yfZmxZoQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cities\\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg"
+    },
+    {
+      "Identity": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg",
+      "SourceId": "RentOffice",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\",
+      "BasePath": "_content/RentOffice",
+      "RelativePath": "uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dwbeiobt01",
+      "Integrity": "vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\cities\\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg",
+      "AssetFile": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2362364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SSzky40yy/dmzWtL7/ids6VI+pZegwrCJD4yfZmxZoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 11:02:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SSzky40yy/dmzWtL7/ids6VI+pZegwrCJD4yfZmxZoQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.pwzianieje.jpg",
+      "AssetFile": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2362364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SSzky40yy/dmzWtL7/ids6VI+pZegwrCJD4yfZmxZoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 11:02:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pwzianieje"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cities/1c2fff05-3625-44b2-ad9e-6efc3e1755eb.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SSzky40yy/dmzWtL7/ids6VI+pZegwrCJD4yfZmxZoQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.dwbeiobt01.jpg",
+      "AssetFile": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "727269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 11:11:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dwbeiobt01"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/cities/1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg",
+      "AssetFile": "C:\\FOLDER PROJEK IKSAN\\C#\\C# OOP\\RentOffice\\wwwroot\\uploads\\cities\\1d0926dc-47fb-4dcc-b34b-21de84dfa043.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "727269"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 11:11:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vdW9gmm7cisHv0ik/7V58KrCXKGDfr220dEokp64MkI="
+        }
+      ]
+    }
+  ]
+}

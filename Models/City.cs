@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace RentOffice.Models
 {
@@ -9,12 +10,6 @@ namespace RentOffice.Models
         public string Photo { get; set; }
         public string Slug { get; set; }
         public DateOnly CreatedAt { get; set; }
-
-        public void setNameAttribute(string value)
-        {
-            Name = value;
-            Slug = value.ToLower().Replace(" ", "-");
-        }
 
         [JsonIgnore]
         public ICollection<OfficeSpace> OfficeSpaces { get; set; }
