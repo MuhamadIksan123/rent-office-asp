@@ -7,19 +7,10 @@
 .vs/
 .vscode/
 /obj
-/bin
+bin
 appsettings.Development.json
 appsettings.json
 RentOffice.csproj
 RentOffice.csproj.user
 RentOffice.http
 /Properties
-appsettings.json
-appsettings.Development.json
-
-echo "appsettings.json" >> .gitignore
-echo "bin/" >> .gitignore
-git rm --cached appsettings.json
-git rm --cached -r bin/
-git add .gitignore
-git commit -m "Ignore appsettings.json and bin directory"

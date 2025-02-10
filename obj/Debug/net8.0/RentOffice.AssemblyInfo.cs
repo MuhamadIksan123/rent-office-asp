@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RentOffice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cb3d9c5ed5371785aab9e9e3a93732ac1fcd362")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efd1f5681fcc07eac28c74ef0dc7ad9b36552350")]
 [assembly: System.Reflection.AssemblyProductAttribute("RentOffice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RentOffice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
